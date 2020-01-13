@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# try $expected $input
 try() {
   expected="$1"
   input="$2"
@@ -17,9 +18,14 @@ try() {
   fi
 }
 
-# try $expected $input
+# step 1
 try 0 0
 try 42 42
+
+# step 2
 try 32 "10+23-1"
+
+# step 3
+try 41 " 12 + 34 - 5 "
 
 echo OK
