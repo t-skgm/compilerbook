@@ -17,7 +17,9 @@ try() {
   fi
 }
 
+# try $expected $input
 try 0 0
 try 42 42
+try 32 "10+23-1"
 
 echo OK
